@@ -21,9 +21,8 @@ api.nvim_create_autocmd(
 api.nvim_create_autocmd('BufWritePre',
 {pattern = '*', callback = function()
     vim.schedule(killWhite)
-end,
-})
-     
+end,})
+
 function killWhite()
     local line, col = unpack(api.nvim_win_get_cursor(0))
     api.nvim_command([[%s/\s\+$//e]])
@@ -35,5 +34,7 @@ function killWhite()
 
     end
     api.nvim_win_set_cursor(0,{line, col})
-
+    api.nvim_command([[noa w]])
 end
+
+
