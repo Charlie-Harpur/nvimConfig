@@ -22,6 +22,7 @@ o.tabstop = 4
 o.smartindent = true
 
 -- window-local options
+wo.number = true
 wo.relativenumber = true
 wo.wrap = false
 wo.cursorline = true
