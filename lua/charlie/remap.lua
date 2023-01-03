@@ -4,8 +4,6 @@ vim.keymap.set({'n', 'v'}, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 
 vim.keymap.set('n', '<leader>cd', ':lcd %:h<CR>')
-vim.keymap.set('n', '<leader>CD',
-':lcd "C:/Users/charp/OneDrive/Documents/Visual Studio Code/C C++/Modules":h<CR>')
 
 -- Move selected lines up/down
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
