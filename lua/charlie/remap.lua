@@ -3,7 +3,7 @@ vim.g.mapleader = ' '
 vim.keymap.set({'n', 'v'}, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 
--- Change working directory to current buffer
+-- Set current buffer directory as working directory
 vim.keymap.set('n', '<leader>cd', ':lcd %:h<CR>')
 
 -- Move selected lines up/down

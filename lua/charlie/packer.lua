@@ -60,6 +60,7 @@ return require('packer').startup(function(use)
     }
 
     --themes
+    --USING Nerdfornt's JetBrainsMono
     use({
         'rose-pine/neovim',
         as = 'rose-pine',
