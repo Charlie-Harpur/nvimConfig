@@ -4,10 +4,12 @@ local bo = vim.bo
 local api = vim.api
 
 -- global options
-o.swapfile = true
-o.dir = '/tmp'
+o.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = '/tmp'
+vim.opt.undofile = true
 
-o.hlsearch = true
+o.hlsearch = false
 o.incsearch = true
 o.ignorecase = true
 o.smartcase = true
@@ -24,6 +26,8 @@ o.smartindent = true
 -- window-local options
 wo.number = true
 wo.relativenumber = true
+wo.colorcolumn = '80'
+wo.signcolumn = 'yes'
 wo.wrap = false
 wo.cursorline = true
 wo.cursorlineopt = 'number,line'
