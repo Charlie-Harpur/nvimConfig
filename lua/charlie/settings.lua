@@ -14,7 +14,9 @@ o.incsearch = true
 o.ignorecase = true
 o.smartcase = true
 
-o.scrolloff = 1
+o.termguicolors = true
+
+o.scrolloff = 4
 
 o.laststatus = 2
 
