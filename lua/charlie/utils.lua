@@ -4,8 +4,11 @@ local api = vim.api
 local yankGroup = api.nvim_create_augroup('YankHighlight', {clear = true})
 api.nvim_create_autocmd('TextYankPost',
 {
-    command = 'silent! lua vim.hightlight.on_yank()',
-    group = yankGroup
+    callback = function()
+        vim.highlight.on_yank()
+    end,
+    group = yankGroup,
+    pattern = '*',
 })
 
 -- Show cursor only in active window
@@ -20,13 +23,13 @@ api.nvim_create_autocmd(
 -- Remove all trailing whitespace on write
 api.nvim_create_autocmd('BufWritePre',
 {pattern = '*', callback = function()
-    vim.schedule(killWhite)
-end,})
+    killWhite()
+end,
+})
 
 function killWhite()
     local line, col = unpack(api.nvim_win_get_cursor(0))
     api.nvim_command([[%s/\s\+$//e]])
-    api.nvim_command([[noh]])
 
     local lastLine = vim.fn.line('$')
     if line > lastLine then
@@ -34,7 +37,6 @@ function killWhite()
 
     end
     api.nvim_win_set_cursor(0,{line, col})
-    api.nvim_command([[noa w]])
 end
 
 
