@@ -23,20 +23,14 @@ api.nvim_create_autocmd(
 -- Remove all trailing whitespace on write
 api.nvim_create_autocmd('BufWritePre',
 {pattern = '*', callback = function()
-    killWhite()
-end,
-})
-
-function killWhite()
     local line, col = unpack(api.nvim_win_get_cursor(0))
     api.nvim_command([[%s/\s\+$//e]])
 
     local lastLine = vim.fn.line('$')
     if line > lastLine then
         line = lastLine
-
     end
     api.nvim_win_set_cursor(0,{line, col})
-end
-
+end,
+})
 
