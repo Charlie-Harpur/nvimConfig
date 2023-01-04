@@ -68,4 +68,7 @@ return require('packer').startup(function(use)
             vim.cmd('colorscheme rose-pine')
         end
     })
+
+    -- Discord Rich Presence
+     use 'andweeb/presence.nvim'
 end)
