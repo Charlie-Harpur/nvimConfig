@@ -26,5 +26,6 @@ vim.keymap.set('n', '<leader>Y', '"+Y')
 -- Maintain copy buffer through deletions
 vim.keymap.set('x', '<leader>p', '"_dP') -- paste and replace
 vim.keymap.set({'n', 'v'}, '<leader>d', '"_d') -- regular delete
+vim.keymap.set('n', '<leader>D', '"_D') -- EOL delete
 
 vim.keymap.set({'n', 'i', 'v'}, '<C-c>', '<Esc>')
