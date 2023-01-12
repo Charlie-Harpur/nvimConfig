@@ -3,6 +3,7 @@ lsp.preset('recommended')
 
 lsp.ensure_installed({
     'sumneko_lua',
+    'clangd',
 })
 
 local cmp = require('cmp')
@@ -15,6 +16,10 @@ local cmp_mappings = {
 
 lsp.set_preferences({
 })
+
+require('lspconfig').clangd.setup{
+    cmd = {'clangd', '-log=verbose'}
+}
 
 lsp.setup_nvim_cmp({
     mapping = cmp_mappings

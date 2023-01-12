@@ -33,4 +33,3 @@ api.nvim_create_autocmd('BufWritePre',
     api.nvim_win_set_cursor(0,{line, col})
 end,
 })
-
