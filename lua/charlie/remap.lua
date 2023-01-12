@@ -4,9 +4,6 @@ local setMap = vim.keymap.set
 vim.g.mapleader = ' '
 setMap({'n', 'v'}, '<Space>', '<Nop>', { silent = true })
 
--- Input Powershell
-setMap('n', '<C-z>', ':!')
-
 -- Open netrw
 setMap('n', '<leader>pv', vim.cmd.Ex)
 
