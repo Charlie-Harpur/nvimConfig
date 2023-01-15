@@ -5,7 +5,7 @@ local api = vim.api
 
 -- global options
 o.shell = 'powershell'
-o.shellcmdflag = '-c'
+o.shellcmdflag = '-Command'
 o.shellquote = ''
 o.shellxquote = ''
 
