@@ -11,9 +11,9 @@ o.shellxquote = ''
 
 
 o.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = '/tmp'
-vim.opt.undofile = true
+o.backup = false
+o.undodir = '/tmp'
+o.undofile = true
 
 o.hlsearch = false
 o.incsearch = true

@@ -42,6 +42,9 @@ return require('packer').startup(function(use)
         }
     }
 
+    -- End of line and indent
+    use "lukas-reineke/indent-blankline.nvim"
+
     -- Git symbolism
     use {
         'lewis6991/gitsigns.nvim',
