@@ -8,7 +8,7 @@ setMap({'n', 'v'}, '<Space>', '<Nop>', { silent = true })
 setMap('n', '<leader>pv', vim.cmd.Ex)
 
 -- Set current buffer directory as working directory
-setMap('n', '<leader>cd', ':lcd %:h<CR>')
+setMap('n', '<leader>cd', ':cd %:h<CR>')
 
 -- Move selected lines up/down
 setMap('v', 'J', ":m '>+1<CR>gv=gv")

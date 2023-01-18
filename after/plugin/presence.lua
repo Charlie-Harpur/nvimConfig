@@ -2,6 +2,7 @@ require('presence'):setup({
     -- General Options
     main_image = 'file',
     neovim_image_text = "Hi :)",
+    buttons = true,
     show_time = false,
 
     -- Rich Presence Text

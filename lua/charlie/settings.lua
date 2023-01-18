@@ -4,12 +4,6 @@ local bo = vim.bo
 local api = vim.api
 
 -- global options
-o.shell = 'powershell'
-o.shellcmdflag = '-Command'
-o.shellquote = ''
-o.shellxquote = ''
-
-
 o.swapfile = false
 o.backup = false
 o.undodir = '/tmp'
